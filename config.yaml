@@ -1,0 +1,93 @@
+project:
+  name: marine_vggish_xai
+  seed: 42
+  device: auto
+  debug: false
+
+paths:
+  raw_data_dir: data/raw
+  metadata_dir: data/metadata
+  processed_dir: data/processed
+  pretrained_dir: models/pretrained
+  checkpoint_dir: models/checkpoints
+  outputs_dir: outputs
+
+data:
+  dataset_name: watkins
+  watkins_index_url: "https://whoicf2.whoi.edu/science/B/whalesounds/index.cfm"
+  watkins_archive_identifier: "watkins_202104"
+  watkins_download_source: "huggingface_parquet"
+  huggingface_dataset_repo: "confit/wmms-parquet"
+  manual_data_dir: null
+  num_species: 3
+  min_samples_per_species: 50
+  max_samples_per_species: 150
+  selected_species:
+    - Spinner Dolphin
+    - Sperm Whale
+    - Humpback Whale
+  subset_strategy: selected_species_max_available
+  allowed_audio_extensions: [".wav", ".mp3", ".flac", ".aiff", ".aif"]
+
+audio:
+  sample_rate: 16000
+  clip_duration_sec: 5.0
+  mono: true
+  normalize: true
+  crop_strategy: energy
+  target_total_segments: 900
+  max_segments_per_source: 5
+  save_preprocessing_png: false
+  n_mels_vggish: 64
+  n_mels_visual: 128
+  n_fft: 1024
+  hop_length: 160
+  win_length: 400
+
+split:
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+  stratified: true
+
+model:
+  backbone: vggish
+  pretrained: true
+  pretrained_source: "torchaudio"
+  pretrained_weights_path: "models/pretrained/vggish_pytorch.pt"
+  freeze_backbone: false
+  training_mode: fine_tune_last
+  classifier_hidden_dim: 256
+  dropout: 0.4
+
+training:
+  epochs: 50
+  batch_size: 16
+  learning_rate: 0.0001
+  backbone_learning_rate: 0.00001
+  weight_decay: 0.0001
+  early_stopping_patience: 12
+  num_workers: 0
+  save_every_epoch: true
+
+xai:
+  max_examples_total: 36
+  examples_per_class_correct_high_conf: 3
+  examples_per_class_low_conf: 2
+  examples_per_class_incorrect: 2
+  methods:
+    - gradcam
+    - integrated_gradients
+    - occlusion
+    - lime
+    - saliency
+    - smoothgrad
+    - input_x_gradient
+    - guided_backprop
+  topk_percentages: [5, 10, 20, 30, 40]
+  random_baseline_trials: 10
+  stability_perturbations:
+    - gaussian_noise
+    - time_shift
+    - amplitude_scaling
+    - frequency_masking

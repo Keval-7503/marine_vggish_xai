@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Virtual environments and local configuration
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Data, checkpoints, and generated experiment artifacts
+data/
+models/
+outputs/
+
+# Generated academic deliverables and presentation files
+report/
+presentation/
+Project_Report.md
+Marine_VGGish_XAI_Project_Report*.docx
+scripts/generate_docx_report.py
+*.pdf
+*.pptx
+~$*.docx
+
+# Logs and local temporary files
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
