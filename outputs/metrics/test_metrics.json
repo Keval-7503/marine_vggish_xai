@@ -1,0 +1,27 @@
+{
+  "test_loss": 0.5389129353894128,
+  "accuracy": 0.8273381294964028,
+  "macro_f1": 0.820479302832244,
+  "weighted_f1": 0.8228052851836178,
+  "top2_accuracy": 0.9712230215827338,
+  "per_class": {
+    "Humpback Whale": {
+      "precision": 1.0,
+      "recall": 0.9148936170212766,
+      "f1": 0.9555555555555556,
+      "support": 47
+    },
+    "Sperm Whale": {
+      "precision": 1.0,
+      "recall": 0.5454545454545454,
+      "f1": 0.7058823529411765,
+      "support": 44
+    },
+    "Spinner Dolphin": {
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8,
+      "support": 48
+    }
+  }
+}

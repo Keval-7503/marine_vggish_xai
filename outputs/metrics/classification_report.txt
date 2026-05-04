@@ -1,0 +1,9 @@
+                 precision    recall  f1-score   support
+
+ Humpback Whale       1.00      0.91      0.96        47
+    Sperm Whale       1.00      0.55      0.71        44
+Spinner Dolphin       0.67      1.00      0.80        48
+
+       accuracy                           0.83       139
+      macro avg       0.89      0.82      0.82       139
+   weighted avg       0.88      0.83      0.82       139

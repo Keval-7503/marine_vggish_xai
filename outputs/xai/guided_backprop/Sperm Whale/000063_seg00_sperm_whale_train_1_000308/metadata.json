@@ -1,0 +1,7 @@
+{
+  "sample_id": "000063_seg00_sperm_whale_train_1_000308",
+  "true_label": "Sperm Whale",
+  "predicted_label": "Spinner Dolphin",
+  "confidence": 0.5406294465065002,
+  "method": "Guided Backpropagation"
+}

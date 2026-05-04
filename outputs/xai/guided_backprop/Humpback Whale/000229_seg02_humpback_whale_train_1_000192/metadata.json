@@ -1,0 +1,7 @@
+{
+  "sample_id": "000229_seg02_humpback_whale_train_1_000192",
+  "true_label": "Humpback Whale",
+  "predicted_label": "Spinner Dolphin",
+  "confidence": 0.4510739743709564,
+  "method": "Guided Backpropagation"
+}

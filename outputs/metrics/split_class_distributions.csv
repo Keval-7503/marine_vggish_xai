@@ -1,0 +1,10 @@
+species,count,split
+Humpback Whale,210,train
+Spinner Dolphin,210,train
+Sperm Whale,208,train
+Sperm Whale,48,val
+Humpback Whale,43,val
+Spinner Dolphin,42,val
+Spinner Dolphin,48,test
+Humpback Whale,47,test
+Sperm Whale,44,test

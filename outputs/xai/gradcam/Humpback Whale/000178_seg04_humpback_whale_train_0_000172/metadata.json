@@ -1,0 +1,7 @@
+{
+  "sample_id": "000178_seg04_humpback_whale_train_0_000172",
+  "true_label": "Humpback Whale",
+  "predicted_label": "Humpback Whale",
+  "confidence": 0.9942983984947203,
+  "method": "Grad-CAM"
+}

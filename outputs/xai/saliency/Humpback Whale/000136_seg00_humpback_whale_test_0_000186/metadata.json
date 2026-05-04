@@ -1,0 +1,7 @@
+{
+  "sample_id": "000136_seg00_humpback_whale_test_0_000186",
+  "true_label": "Humpback Whale",
+  "predicted_label": "Humpback Whale",
+  "confidence": 0.993989109992981,
+  "method": "Saliency"
+}

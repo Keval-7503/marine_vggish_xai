@@ -1,0 +1,7 @@
+{
+  "sample_id": "000233_seg01_sperm_whale_test_0_000141",
+  "true_label": "Sperm Whale",
+  "predicted_label": "Sperm Whale",
+  "confidence": 0.5423941612243652,
+  "method": "SmoothGrad"
+}

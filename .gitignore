@@ -14,17 +14,15 @@ env/
 .env
 .env.*
 
-# Data, checkpoints, and generated experiment artifacts
+# Data and checkpoints
 data/
 models/
-outputs/
 
 # Generated academic deliverables and presentation files
 report/
 presentation/
 Project_Report.md
 Marine_VGGish_XAI_Project_Report*.docx
-scripts/generate_docx_report.py
 *.pdf
 *.pptx
 ~$*.docx
